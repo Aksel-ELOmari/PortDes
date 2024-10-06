@@ -1,0 +1,261 @@
+.h-100{height: 100vh;}
+.w-100{width: 100vw;}
+.m-auto{margin: 0 auto;}
+.flex,
+.flex-around,
+.flex-between,
+.flex-center,
+.flex-evenly{display: flex;align-items: center;}
+.flex-center,.justify-content-center{justify-content: center;}
+.justify-content-between{justify-content: space-between;}
+.button{padding: 12px 20px;border-radius: 20px;border: 0;outline: 0;background: #000;}
+.text-center {text-align: center;}
+.orangered{color: #000;}
+a,.link,.link-item{text-decoration: none;color: var(--text-color) !important;}
+a,.link,.link-item:hover{color: blue;}
+/*End the Golball Classes */
+:root{
+    --bg-color:#fff;
+    --text-color:#000;
+    --odd-section:#CCD0CF;
+}
+body.night
+{
+    --bg-color:#1f1e1e;
+    --text-color:#a8a3a3d8;
+    --odd-section:#fff;
+}
+body::-webkit-scrollbar{display: none;}
+body
+{
+    scroll-padding-top: 10px;
+    scroll-behavior: smooth;
+    background: var( --bg-color);
+    color:var(--text-color);
+}
+section{width: 100%;}
+/* start  styling the hero section  */
+header{
+    background: var(--odd-section);
+    border-radius: 0 0 70px 70px;
+}
+nav {white-space: wrap;}
+nav .prt-right a {font-weight: bold;}
+.Owner-profile
+{
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+}
+.Owner-picture,#Owner-picture
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Owner-profile .alt-Name
+{
+    position: absolute;
+    top: 40%;
+    right: -60%;
+    translate:0 -50%;
+    rotate: -20deg;
+    background: #fff;
+    border-radius: .8rem;
+}
+.Owner-description
+{
+    width: 50%;
+    max-width: 100%;
+    height: fit-content;
+}
+.expo-btn button
+{
+    border: 0;
+    outline: 0;
+    padding: .6rem 1rem;
+    border-radius: 20px;
+    color: var(--bg-color);
+}
+/* end styling the hero section */
+
+/* start  styling the Brands section  */
+.associates-logos
+{
+    position: relative;
+    border-radius: 0 0 70px 70px;
+    /* padding: 10rem 0; */
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--bg-color);
+}
+.associates-logos::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: var(--odd-section);
+    z-index: -1;
+}
+.projects-logos .associate-item
+{
+    position: relative;
+    margin: 0 2rem;
+}
+.projects-logos .associate-item img
+{
+    height: 50%;
+    width: auto;
+    object-fit: cover;
+}
+/* end  styling the Brands section  */
+
+/* start  styling the footer and under footer section  */
+.footer__section
+{
+    padding: 10rem 5rem;
+    background: var(--odd-section);
+    position: relative;
+}
+.footer__section .collab-text
+{
+    width: 50%;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    translate: -50% 0%;
+}
+.button__inner{position: relative;text-align: center;}
+.button__inner .hrs
+{
+    position: absolute;
+    top:50%;
+    width: 100%;
+    height: fit-content;
+}
+.button__inner .hr
+{
+    width:35.5vw;
+    height: 2px;
+    background: #000;
+}
+.button__inner button.call-btn{z-index: 2 !important;}
+.light_btn-item
+{
+    border: 0;
+    outline: 0;
+    padding: 6px 30px;
+    border-radius: 30px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+.chat-btn
+{
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: transparent;
+    color: var(--text-color);
+    border: solid 1px var(--text-color);
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.chat-btn:hover,
+.chat-btn.height__lighted
+{background: var(--text-color) !important;color: var(--odd-section);}
+.second-footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.chat_brand img
+{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.service-icon{height: 3rem;}
+/*? start  styling the footer and under footer section  */
+
+
+
+
+
+/************************** View Ports Units On My Pc ************************/
+/* 4-K */
+@media screen and (max-width:2560px){}
+/* laptop-L */
+@media screen and (min-width:1440px){}
+/* laptop */
+@media screen and (max-width:1024px){}
+@media screen and (max-width:768px)
+{
+    nav{flex-direction: column;gap: .5rem;}
+    nav div {width: 100%;display: flex;align-items: center;justify-content: space-around;}
+    .footer__section .call-btn{translate: 0 100%;}
+}
+@media screen and (max-width:425px)
+{
+    nav{flex-direction: column;gap: .5rem;}
+    nav div {width: 100%;display: flex;align-items: center;justify-content: space-around;}
+    .Owner-description{width: 100%;text-align: center !important;}
+    .footer__section .call-btn{translate: 0 150%}
+    .light_btn-item{padding: 3px 12px;font-size: .6rem;margin: 0 .3rem;}
+    .hrs{display: none !important;}
+    .collab-text{width: 98% !important;}
+}
+@media screen and (max-width:320px)
+{
+    nav,.prt-left{flex-direction: column !important;}
+    nav > *{font-size: .6rem;}
+    nav div {gap: .9rem;}
+    .footer__section .collab-text
+    {
+        translate: -50% -100%;
+    }
+    .light_btn-item
+    {
+        padding:5px 20px;
+    }
+    .Owner-profile
+    {
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+    }
+    .Owner-profile .alt-Name
+    {
+        font-size: .5rem;
+        right: -100%;
+        top: 30%;
+    }
+    .Owner-description
+    {
+        width: 80%;
+        max-width: 100%;
+        height: fit-content;
+    }
+    .footer__section{padding:1rem .3rem !important;}
+    .services__container{margin-top:30% !important;}
+    .button__inner .hrs{display: none !important;}
+    .chat-btn{padding: 5px 10px !important;}
+}
+

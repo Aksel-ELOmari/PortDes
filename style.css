@@ -1,0 +1,38 @@
+/*? COLORS */
+:root
+{
+    --property-pink:#ea2dd8;
+    --property-blue:#001bf1;
+    --color-cyan : #00ffff;
+    --color-dodgerblue:#1e90ff;
+    --color-purple: #800080;
+}
+/*? COLORS */
+
+/*? to limet the lenght of the lines will show */
+.line-clamp
+{
+    --max-lines: 3;
+    font-weight: 500;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+
+/* ? makes the scrolling animation more smouther */
+.parent-scroll{
+    scroll-snap-type: x mandatory;/*X || Y*/
+    overflow: hidden;
+}
+.child-scroll{
+    scroll-snap-align: center;
+}
+
+/*? the Property Attribute CSS */
+@property --angle {
+    /* it could be rought like this => << syntax: "blue | cyan | dodgerblue"; >> */
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}
